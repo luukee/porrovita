@@ -1,0 +1,60 @@
+// WP Admin classes
+#wpadminbar {
+  transition: all 0.4s ease;
+  &.hide {
+    transform: translate(0, -90px);
+  }
+}
+#adminTrigger {
+  // display: none;
+  transition: all .4s ease;
+  z-index: 101;
+  &:hover {
+    opacity: 1;
+  }
+  &:after {
+    background: #333;
+    color: #fff;
+    font-size: 34px;
+    display: block;
+    line-height: 100%;
+    padding: 5px 0 10px;
+    width: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    transition: all .4s ease;
+    content: "+";
+    text-align: center;
+  }
+  &.down {
+    &:after {
+      padding: 0;
+      transform: translate(0, 32px);
+      -moz-transform: translate(0, 32px);
+      -webkit-transform: translate(0, 32px);
+      content: "-";
+    }
+  }
+}
+.welcome-image {
+    height: 370px;
+    width: 260px;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+}
+.login-logo {
+  background: url(../images/admin-logo.png) no-repeat scroll center top transparent;
+  background-size: cover;
+  height: 270px;
+  width: 185px;
+  .custom-login-form & {
+    margin: 0 auto 20px;
+  }
+}
+#creek {
+  display: none;
+}

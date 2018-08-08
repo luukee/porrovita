@@ -1,0 +1,33 @@
+.juices {
+  h3 {
+    font-size: 12px;
+    margin: 0 0 5px;
+    line-height: 150%;
+  }
+  p {
+    font-size: 10px;
+    line-height: 175%;
+  }
+}
+.juice {
+  margin-bottom: 15px;
+}
+@include break(wide) {
+  .juice:nth-child(4) {
+    clear: left;
+  }
+}
+.diagram {
+  padding: 15px;
+  @include breakFirst(large) {
+    padding: 50px;
+  }
+}
+.testimonials {
+  .testimonial-image {
+    margin-bottom: 30px;
+  }
+  img {
+    float: left;
+  }
+}

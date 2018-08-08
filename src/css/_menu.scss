@@ -1,0 +1,139 @@
+.menu-column {
+	h1 {
+		font-size: $baseFontSize * 2;
+		line-height: $baseLineHeight * 1.5;
+		@include breakFirst(medium) {
+			font-size: $baseFontSize * 2.5;
+			line-height: $baseLineHeight * 1.75;
+		}
+		@include breakFirst(large) {
+			font-size: $baseFontSize * 2.5;
+			line-height: $baseLineHeight * 2;
+		}
+		@include breakFirst(wide) {
+			font-size: $baseFontSize * 2.75;
+		}
+	}
+	.section-heading {
+		font-size: 14px;
+		line-height: 120%;
+		margin: 10px 0 20px;
+		font-family: $sansExtraBold;
+		text-transform: uppercase;
+	}
+	h3 {
+		font-family: $sansBold;
+	}
+	p {
+		font-size: 14px;
+		line-height: 150%;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		&:before,
+		&:after {
+			content: " "; /* 1 */
+			display: table; /* 2 */
+		}
+		&:after {
+			clear: both;
+		}
+		li {
+			float: left;
+			width: 48%;
+			margin-right: 2%;
+		  	line-height: 12px;
+			list-style: none;
+			&:nth-child(even) {
+				margin-right: 0;
+			}
+		}
+	}
+	.column-heading {
+		span {
+			display: block;
+			font-size: 12px;
+			line-height: 120%;
+			.size {
+				font-size: 10px;
+			}
+		}
+		.item-value {
+			display: inline-block;
+			margin-right: 20px;
+			.price {
+				font-family: $sansExtraBold;
+			}
+		}
+	}
+	.image-wrapper {
+		margin: 20px 0;
+	}
+	.value-heading {
+		margin: 10px 0 25px;
+	}
+	.item {
+		&.full {
+			margin: 20px 0;
+		}
+		> * {
+			display: inline-block;
+			float: left;
+		}
+		.name {
+			width: 80%;
+			margin: 0;
+			font-size: 14px;
+			line-height: 120%;
+			text-transform: uppercase;
+		}
+		.price {
+			width: 20%;
+			text-align: right;
+			&.extra {
+				color: $green;
+			}
+		}
+		.name, .price {
+			line-height: 20px;
+		}
+		.ingredients {
+			width: 100%;
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+	.add-on {
+		margin: 2px 0 2px;
+		> * {
+			display: inline-block;
+			float: left;
+		}
+		.name {
+			width: 80%;
+			margin: 0;
+			font-size: 14px;
+			line-height: 120%;
+			text-transform: uppercase;
+		}
+		.price {
+			width: 20%;
+			text-align: right;
+		}
+		.name, .price {
+			line-height: 20px;
+		}
+	}
+	.line-break {
+		height: 0;
+		padding-bottom: 5%;
+		width: 100%;
+		display: block;
+		background-image: url('../images/ui/column-break.svg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center;
+		margin: 25px 0 30px;
+	}
+}

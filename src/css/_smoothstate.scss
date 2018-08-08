@@ -1,0 +1,92 @@
+/* @mixin respond-to
+------------------------------------------------------------------- */
+.scene {
+  animation-duration: 0.25s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+.scene-fadein {
+  animation-name: fadeIn; }
+.scene-fadeinup {
+  animation-name: fadeInUp; }
+.scene-fadeinright {
+  animation-name: fadeInRight; }
+.scene-delayed {
+  animation-delay: 0.25s; }
+.is-exiting .scene {
+  animation-name: fadeOut; }
+.is-exiting .scene-delayed {
+  animation-delay: 0s; }
+.is-exiting .scene-noexiting {
+  animation-direction: alternate-reverse; }
+
+@media screen and (min-width: 768px) {
+  .scene--fadeinright-wide {
+    animation-name: fadeInRight; } }
+
+.is-loading,
+.is-loading a {
+  cursor: progress;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.fadeOn {
+  animation-name: fadeOut;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 5%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeOutDown {
+  animation-name: fadeOutDown;
+}
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+   transform: translate3d(0, 0%, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
